@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Explore India View",
+    "slug": "Explore_India_View",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo-square.jpg",
+    "scheme": "mobile",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo-square.jpg",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.exploreindiaview.Explore_India_View"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logo-square.jpg"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logo-square.jpg",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6c723e95-f27f-47c6-b9a7-2b10e3213c64"
+      }
+    }
+  }
+}
