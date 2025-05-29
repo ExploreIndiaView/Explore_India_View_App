@@ -107,7 +107,7 @@ export function ScratchCard({ cashbackAmount }: { cashbackAmount: string }) {
       <View style={styles.card}>
         <Image
           style={styles.image}
-          source={require("@/assets/images/gift.png")}
+          source={require("@/assets/images/gift.jpg")}
         />
         <Text style={styles.titleText}>You got</Text>
         <Text style={styles.subTitleText}>₹{cashbackAmount}</Text>
