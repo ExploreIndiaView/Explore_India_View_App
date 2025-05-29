@@ -18,7 +18,7 @@ export default function PackagesList() {
   return (
     <View style={styles.container}>
       <View style={styles.headerRow}>
-        <Text style={styles.heading}>Packages</Text>
+        <Text style={styles.heading}>Tour Packages</Text>
         <TouchableOpacity onPress={() => {router.push("/packages")}}>
           <Text style={styles.showMore}>Show More</Text>
         </TouchableOpacity>

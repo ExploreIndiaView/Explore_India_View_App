@@ -209,6 +209,7 @@ const styles = StyleSheet.create({
     paddingVertical: Platform.OS === "ios" ? 12 : 8,
     fontSize: 16,
     backgroundColor: "#f9fafb",
+    color:"#000",
   },
   showPassword: {
     position: "absolute",

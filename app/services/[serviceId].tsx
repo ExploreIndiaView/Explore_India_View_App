@@ -1,6 +1,7 @@
 import { imageMap } from "@/assets/services/imageMap";
 import { SERVICES } from "@/assets/services/Options"; // Adjust path as needed
 import BackHeader from "@/components/BackHeader";
+import InquirySection from "@/components/InquirySection";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import {
@@ -31,36 +32,37 @@ export default function ServiceDetails() {
   return (
     selectedService && (
       <>
-      <BackHeader />
-      <ScrollView contentContainerStyle={styles.container}>
-        {/* Image carousel/banner */}
-        <View style={styles.carouselContainer}>
-          <Carousel
-            width={width}
-            height={220}
-            data={selectedService.image}
-            autoPlay
-            scrollAnimationDuration={1200}
-            renderItem={({ item }) => (
-              <Image
-                source={
-                  imageMap[item.image] || require("@/assets/images/logo.png")
-                }
-                style={styles.carouselImage}
-                resizeMode="cover"
-              />
-            )}
-          />
-        </View>
+        <BackHeader />
+        <ScrollView contentContainerStyle={styles.container}>
+          {/* Image carousel/banner */}
+          <View style={styles.carouselContainer}>
+            <Carousel
+              width={width}
+              height={220}
+              data={selectedService.image}
+              autoPlay
+              scrollAnimationDuration={1200}
+              renderItem={({ item }) => (
+                <Image
+                  source={
+                    imageMap[item.image] || require("@/assets/images/logo.png")
+                  }
+                  style={styles.carouselImage}
+                  resizeMode="cover"
+                />
+              )}
+            />
+          </View>
 
-        {/* Service Name */}
-        <Text style={styles.heading}>{selectedService.name}</Text>
+          {/* Service Name */}
+          <Text style={styles.heading}>{selectedService.name}</Text>
 
-        {/* Overview Card */}
-        <View style={styles.card}>
-          <Text style={styles.overview}>{selectedService.Overview}</Text>
-        </View>
-      </ScrollView>
+          {/* Overview Card */}
+          <View style={styles.card}>
+            <Text style={styles.overview}>{selectedService.Overview}</Text>
+          </View>
+            <InquirySection />
+        </ScrollView>
       </>
     )
   );

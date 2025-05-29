@@ -12,7 +12,7 @@ export default function PackagesScreen() {
     <>
     <BackHeader/>
     <View style={styles.container}>
-      <Text style={styles.heading}>Packages</Text>
+      <Text style={styles.heading}>Tour Packages</Text>
       <CreateOwnPackageModal title="Create Your Own Package" />
       <FlatList
         data={PACKAGES}

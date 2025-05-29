@@ -74,6 +74,7 @@ export default function CreateOwnPackageModal({ title }: { title: string }) {
             <>
               {/* City Picker */}
               <View style={styles.pickerWrapper}>
+                <Text style={styles.sectionTitle}>Places</Text>
                 <Picker
                   selectedValue={selectedCity}
                   onValueChange={(itemValue) => OnCitySelect(itemValue)}
@@ -101,6 +102,7 @@ export default function CreateOwnPackageModal({ title }: { title: string }) {
               </View>
               {/* Adventure Picker */}
               <View style={styles.pickerWrapper}>
+                <Text style={styles.sectionTitle}>Extra Activities</Text>
                 <Picker
                   selectedValue={selectedAdventure}
                   onValueChange={(itemValue) => OnAdventureSelect(itemValue)}
@@ -222,6 +224,8 @@ const styles = StyleSheet.create({
   },
   picker: {
     width: "100%",
+    color: "#000",
+    fontSize: 16,
   },
   chipRow: {
     flexDirection: "row",

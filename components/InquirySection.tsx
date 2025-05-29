@@ -120,6 +120,7 @@ export default function InquirySection({ expand = false }) {
                   <Text style={styles.cancelBtnText}>Cancel</Text>
                 </TouchableOpacity>
               </View>
+              <WhatsAppButton />
             </View>
           </View>
         </Modal>

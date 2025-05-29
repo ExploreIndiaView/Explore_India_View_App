@@ -1316,19 +1316,19 @@ export const SHOPPING = [
   {
     name: "Amazon",
     image: "@/assets/images/amazon.png",
-    path: "",
+    path: "https://www.amazon.in",
     PoweredBy: "Amazon",
   },
   {
     name: "Flipkart",
     image: "@/assets/images/flipkart.png",
-    path: "",
+    path: "https://www.flipkart.com",
     PoweredBy: "Flipkart",
   },
   {
     name: "Myntra",
     image: "@/assets/images/myntra.png",
-    path: "",
+    path: "https://www.myntra.com",
     PoweredBy: "Myntra",
   },
   {

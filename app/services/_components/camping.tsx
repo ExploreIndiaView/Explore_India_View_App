@@ -12,6 +12,7 @@ import {
 import Carousel from "react-native-reanimated-carousel";
 import { CAMPING } from "@/assets/services/Options"; // Adjust path as needed
 import { imageMap } from "@/assets/services/imageMap";
+import CreateOwnPackageModal from "@/components/CreateYourOwnPackage";
 
 const { width } = Dimensions.get("window");
 
@@ -55,9 +56,7 @@ export default function CampingScreen() {
             <Text style={styles.cardDesc} numberOfLines={4}>
               {item.desc}
             </Text>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>View</Text>
-            </TouchableOpacity>
+            <CreateOwnPackageModal title="Book Now"/>
           </View>
         )}
       />

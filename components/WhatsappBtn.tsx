@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
   return (
     <Link
       style={{
-        padding: 10,
+        padding: 7,
         width: "100%",
         borderWidth: 1,
         borderColor: "#34d399",
@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
     >
       <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
-        <Ionicons name="logo-whatsapp" size={40} color="white" />
+        <Ionicons name="logo-whatsapp" size={30} color="white" />
         <Text style={{ marginLeft: 10, color: "white", fontSize: 17 }}>
           Raise query directly in WhatsApp
         </Text>
