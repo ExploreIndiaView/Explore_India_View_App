@@ -1,4 +1,5 @@
 import { useAuthStore } from "@/assets/store/auth.store";
+import { Link } from "expo-router";
 import React from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 
@@ -8,21 +9,27 @@ export default function CashbackList() {
   // Sort by date descending and take the latest 3
   const cashbackData = Array.isArray(user?.CashbackDetail)
     ? [...user.CashbackDetail]
-        .sort(
-          (a, b) =>
-            new Date(b.date).getTime() - new Date(a.date).getTime()
-        )
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
         .slice(0, 3)
     : [];
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cashbacks</Text>
+      <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+        <Text style={styles.title}>Cashbacks</Text>
+        <Link href={'/cashbacks'} style={{ color: "blue" }}>See All</Link>
+      </View>
       <FlatList
         data={cashbackData}
         renderItem={({ item, index }) => (
           <View key={index} style={styles.cashbackItem}>
-            <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 5 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginBottom: 5,
+              }}
+            >
               <Text style={styles.cashbackUser}>
                 You have won the cashback of
               </Text>
