@@ -1316,7 +1316,7 @@ export const SHOPPING = [
   {
     name: "Amazon",
     image: "@/assets/images/amazon.png",
-    path: "https://www.amazon.in/?&language=en_IN&ref_=as_li_ss_tl",
+    path: "https://www.amazon.in?&linkCode=ll2&tag=exploreindiav-21&linkId=63adbf129f70cb789b5d4740af781ca9&language=en_IN&ref_=as_li_ss_tl",
     PoweredBy: "Amazon",
   },
   {

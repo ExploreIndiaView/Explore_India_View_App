@@ -551,7 +551,7 @@ export const PACKAGES = [
         <strong>End of tour and Departure</strong>: Rajasthani Cultural Dinner, Folk dances and music (optional).<br/><br/>
         `,
       },
-       {
+      {
         name: "Jaisalmer",
         description: `
     <strong>Day 1:</strong><br/><br/>
@@ -589,7 +589,7 @@ export const PACKAGES = [
     Optional visit to the Khuri Jain Temple, a serene temple in traditional style.
 `,
       },
-     {
+      {
         name: "Jodhpur",
         description: `
     <strong>Departure for Jodhpur (9:30 AM):</strong><br/><br/>
@@ -684,7 +684,7 @@ export const PACKAGES = [
     Admire the exquisite miniature paintings depicting courtly life and historical events.
 `,
       },
-     {
+      {
         name: "Ajmer-Pushkar",
         description: `
     <strong>Ajmer-Pushkar Itinerary</strong><br/><br/>
@@ -1071,7 +1071,7 @@ export const PACKAGES = [
         <strong>End of tour and Departure</strong>: Rajasthani Cultural Dinner, Folk dances and music (optional).<br/><br/>
         `,
       },
-       {
+      {
         name: "Jaisalmer",
         description: `
     <strong>Day 1:</strong><br/><br/>
@@ -1265,9 +1265,6 @@ export const PACKAGES = [
     Safari Timings (Afternoon): 2:30 PM – 5:30 PM<br/><br/>
 
     <strong>2:30 PM – 5:30 PM:</strong> Ranthambore National Park – Jungle Safari<br/><br/>
-    Entry Fee (per person):<br/><br/>
-    - Indians: ₹1000 (Gypsy), ₹600 (Canter)<br/><br/>
-    - Foreigners: ₹1800 (Gypsy), ₹1400 (Canter)<br/><br/>
     Safari Duration: 3 hrs<br/><br/>
     Highlights: Tiger sighting (if lucky!), leopards, sloth bears, birds, lakes, fort views<br/><br/>
 
@@ -1442,7 +1439,7 @@ export const PACKAGES = [
         <strong>End of tour and Departure</strong>: Rajasthani Cultural Dinner, Folk dances and music (optional).<br/><br/>
         `,
       },
-       {
+      {
         name: "Jaisalmer",
         description: `
     <strong>Day 1:</strong><br/><br/>
@@ -1517,7 +1514,7 @@ export const PACKAGES = [
 
         Mount Abu is Rajasthan’s only hill station, popular for the Dilwara Jain Temples, Nakki Lake, and the cool, green hill environment.`,
       },
-     {
+      {
         name: "Udaipur",
         description: `
     <strong>Udaipur Itinerary</strong><br/><br/>
@@ -1660,9 +1657,6 @@ export const PACKAGES = [
     Safari Timings (Afternoon): 2:30 PM – 5:30 PM<br/><br/>
 
     <strong>2:30 PM – 5:30 PM:</strong> Ranthambore National Park – Jungle Safari<br/><br/>
-    Entry Fee (per person):<br/><br/>
-    - Indians: ₹1000 (Gypsy), ₹600 (Canter)<br/><br/>
-    - Foreigners: ₹1800 (Gypsy), ₹1400 (Canter)<br/><br/>
     Safari Duration: 3 hrs<br/><br/>
     Highlights: Tiger sighting (if lucky!), leopards, sloth bears, birds, lakes, fort views<br/><br/>
 
@@ -1829,7 +1823,7 @@ export const PACKAGES = [
         <strong>End of tour and Departure</strong>: Rajasthani Cultural Dinner, Folk dances and music (optional).<br/><br/>
         `,
       },
-       {
+      {
         name: "Jaisalmer",
         description: `
     <strong>Day 1:</strong><br/><br/>
@@ -2002,7 +1996,7 @@ export const PACKAGES = [
         description: `Mount Abu is Rajasthan’s only hill station, popular for the Dilwara Jain Temples, Nakki Lake, and the cool, green hill environment.
         `,
       },
-     {
+      {
         name: "Udaipur",
         description: `
     <strong>Udaipur Itinerary</strong><br/><br/>
@@ -2154,7 +2148,7 @@ export const PACKAGES = [
         <strong>Nahargarh Fort (02:30pm - 04:00pm)</strong>: End of the day with  stunning view of Jaipur, Enjoy snacks or tea at padao Cafe inside fort. Ideal spot to relax and take in the panoramic views of the Pink City.<br/><br/>
         `,
       },
-       {
+      {
         name: "Jaisalmer",
         description: `
     <strong>Day 1:</strong><br/><br/>
@@ -2536,7 +2530,7 @@ export const PACKAGES = [
         <strong>End of tour and Departure</strong>: Rajasthani Cultural Dinner, Folk dances and music (optional).<br/><br/>
         `,
       },
-       {
+      {
         name: "Jaisalmer",
         description: `
     <strong>Day 1:</strong><br/><br/>
