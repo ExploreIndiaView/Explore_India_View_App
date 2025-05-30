@@ -1,4 +1,4 @@
-import { UserInput } from "@/assets/services/types";
+import { ResetInput, UserInput } from "@/assets/services/types";
 import { useAuthStore } from "@/assets/store/auth.store";
 import { Ionicons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
@@ -18,9 +18,8 @@ import {
 import type { CountryCode } from "react-native-country-picker-modal";
 import CountryPicker from "react-native-country-picker-modal";
 
-export default function SignupScreen() {
-  const [input, setInput] = useState<UserInput>({
-    fullname: "",
+export default function ResetPasswordScreen() {
+  const [input, setInput] = useState<ResetInput>({
     isoCode: "+91",
     mobile: "",
     password: "",
@@ -35,7 +34,7 @@ export default function SignupScreen() {
   const [withFlag] = useState(true);
   const [withCallingCode] = useState(true);
   const [loading, setLoading] = useState(false);
-  const { signup, error } = useAuthStore();
+  const { resetPassword, error } = useAuthStore();
 
   interface Country {
     cca2: CountryCode;
@@ -52,7 +51,10 @@ export default function SignupScreen() {
   const handleSignup = async () => {
     setLoading(true);
     try {
-      await signup(input);
+      const res = await resetPassword(input);
+      if(res) {
+        router.replace("/(auth)");
+      }
     } catch (e) {
       setLoading(false);
     } finally {
@@ -66,16 +68,8 @@ export default function SignupScreen() {
       style={styles.container}
     >
       <View style={styles.card}>
-        <Text style={styles.title}>Sign Up</Text>
+        <Text style={styles.title}>Reset Password</Text>
         {error ? <Text style={styles.error}>{error}</Text> : null}
-        {/* Name */}
-        <Text style={styles.label}>Name</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter Name"
-          value={input.fullname}
-          onChangeText={(text) => setInput({ ...input, fullname: text })}
-        />
         {/* Mobile */}
         <Text style={styles.label}>Mobile</Text>
         <View style={styles.row}>
@@ -98,45 +92,42 @@ export default function SignupScreen() {
             onChangeText={(text) => setInput({ ...input, mobile: text })}
           />
         </View>
+        {/* Security Question */}
+        <Text style={styles.label}>Security Question</Text>
+        <View style={styles.pickerWrapper}>
+          <Picker
+            selectedValue={input.question}
+            onValueChange={(itemValue) =>
+              setInput({ ...input, question: itemValue })
+            }
+            style={styles.picker}
+          >
+            <Picker.Item label="Select Security Question" value={undefined} />
+            <Picker.Item label="What is your pet's name?" value={"pet"} />
+            <Picker.Item
+              label="What was the name of your first school?"
+              value={"school"}
+            />
+            <Picker.Item label="In which city were you born?" value={"city"} />
+          </Picker>
+        </View>
+        {/* Answer */}
+        <Text style={styles.label}>Answer</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter Answer"
+          value={input.answer}
+          onChangeText={(text) => setInput({ ...input, answer: text })}
+        />
         {/* Password */}
-        <Text style={styles.label}>Password</Text>
+        <Text style={styles.label}>New Password</Text>
         <View>
           <TextInput
             style={styles.input}
-            placeholder="Enter Password"
+            placeholder="Enter new Password"
             secureTextEntry={!showPassowrd}
             value={input.password}
             onChangeText={(text) => setInput({ ...input, password: text })}
-          />
-          {/* Security Question */}
-          <Text style={styles.label}>Security Question</Text>
-          <View style={styles.pickerWrapper}>
-            <Picker
-              selectedValue={input.question}
-              onValueChange={(itemValue) =>
-                setInput({ ...input, question: itemValue })
-              }
-              style={styles.picker}
-            >
-              <Picker.Item label="Select Security Question" value={undefined} />
-              <Picker.Item label="What is your pet's name?" value={"pet"} />
-              <Picker.Item
-                label="What was the name of your first school?"
-                value={"school"}
-              />
-              <Picker.Item
-                label="In which city were you born?"
-                value={"city"}
-              />
-            </Picker>
-          </View>
-          {/* Answer */}
-          <Text style={styles.label}>Answer</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter Answer"
-            value={input.answer}
-            onChangeText={(text) => setInput({ ...input, answer: text })}
           />
           <Pressable
             style={styles.showPassword}

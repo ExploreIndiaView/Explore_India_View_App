@@ -49,6 +49,10 @@ export default function PackageDetailScreen() {
 
         <View style={styles.contentRow}>
           <View style={styles.leftCol}>
+
+            <View style={styles.sectionTitle}>
+              <Text style={styles.sectionTitle}>{Package.days} days / {Package.nights} nights</Text>
+            </View>
             {/* Overview */}
             {Package.Overview && Package.Overview.length > 0 && (
               <>

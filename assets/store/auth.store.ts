@@ -1,4 +1,4 @@
-import { LoginInput, User, UserInput } from "../services/types";
+import { LoginInput, ResetInput, User, UserInput } from "../services/types";
 import { create } from "zustand";
 import axios from "axios";
 import { API_URL } from "../services/API";
@@ -17,6 +17,7 @@ interface AuthStore {
   resendOtp: (mobile: string) => Promise<void>;
   checkAuth: () => Promise<void>;
   checkAdmin: () => Promise<void>;
+  resetPassword: (userInput: ResetInput) => Promise<boolean>;
   login: (user: LoginInput) => Promise<void>;
   logout: () => void;
   reset: () => void;
@@ -38,7 +39,9 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
         !userInput.fullname ||
         !userInput.mobile ||
         !userInput.password ||
-        !userInput.isoCode
+        !userInput.isoCode ||
+        !userInput.answer ||
+        !userInput.question
       ) {
         set({ error: "Please fill all fields" });
         return false;
@@ -49,20 +52,25 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
       });
       if (response.status === 400) throw new Error(response.data.message);
       // check for admin also
-      const responseAdmin = await axios.get(
-        `${API_URL}/api/v1/auth/check-admin`,
-        {
-          headers: {
-            Authorization: `Bearer ${response.data.token}`,
-          },
+      try {
+        const responseAdmin = await axios.get(
+          `${API_URL}/api/v1/auth/check-admin`,
+          {
+            headers: {
+              Authorization: `Bearer ${response.data.token}`,
+            },
+          }
+        );
+        if (responseAdmin.data.isAdmin) {
+          set({
+            isAdmin: true,
+          });
         }
-      );
-      if (responseAdmin.status === 400)
-        throw new Error(responseAdmin.data.message);
-      if (responseAdmin) {
-        set({ isAdmin: true });
-      }
+        if (responseAdmin.status === 401)
+          throw new Error(responseAdmin.data.message);
+      } catch (error) {}
       set({
+        isAuthenticated: true,
         user: response.data.user,
         token: response.data.token,
       });
@@ -93,19 +101,20 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
       });
       if (response.status === 400) throw new Error(response.data.message);
       // check for admin also
-      const responseAdmin = await axios.get(
-        `${API_URL}/api/v1/auth/check-admin`,
-        {
-          headers: {
-            Authorization: `Bearer ${response.data.token}`,
-          },
+      try {
+        const responseAdmin = await axios.get(
+          `${API_URL}/api/v1/auth/check-admin`,
+          {
+            headers: {
+              Authorization: `Bearer ${response.data.token}`,
+            },
+          }
+        );
+        if (responseAdmin.data.isAdmin) {
+          set({ isAdmin: true });
         }
-      );
-      if (responseAdmin.status === 400)
-        throw new Error(responseAdmin.data.message);
-      if (responseAdmin) {
-        set({ isAdmin: true });
-      }
+        if (responseAdmin.status === 401) throw new Error(responseAdmin.data);
+      } catch (error) {}
       set({
         isAuthenticated: true,
         user: response.data.user,
@@ -164,6 +173,35 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
       set({ error: error.response?.data?.message || "Something went wrong" });
     }
   },
+  resetPassword: async (userInput) => {
+    try {
+      set({ error: null });
+      if (
+        !userInput.mobile ||
+        !userInput.password ||
+        !userInput.isoCode ||
+        !userInput.answer ||
+        !userInput.question
+      ) {
+        set({ error: "Please fill all fields" });
+        return false;
+      }
+
+      const response = await axios.post(
+        `${API_URL}/api/v1/auth/forgot-password`,
+        {
+          ...userInput,
+          mobile: userInput.isoCode + userInput.mobile,
+        }
+      );
+      if (response.status === 400) throw new Error(response.data.message);
+      Alert.alert(response.data.message);
+      return true;
+    } catch (error: any) {
+      Alert.alert(error.response?.data?.message || "Something went wrong");
+      return false;
+    }
+  },
   // checkAuth function to check if the user is authenticated
   checkAuth: async () => {
     set({ error: null, checkingAuth: true });
@@ -177,25 +215,28 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
         },
       });
       if (response.status === 400) throw new Error(response.data.message);
+      set({ token: token });
       // check for admin here only if user is authenticated
-      const responseAdmin = await axios.get(
-        `${API_URL}/api/v1/auth/check-admin`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+      try {
+        const responseAdmin = await axios.get(
+          `${API_URL}/api/v1/auth/check-admin`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        if (responseAdmin.status === 401) throw new Error(responseAdmin.data);
+        if (responseAdmin.data.isAdmin) {
+          set({
+            isAdmin: true,
+            isAuthenticated: true,
+            user: responseAdmin.data.user,
+          });
         }
-      );
-      if (responseAdmin.status === 400)
-        throw new Error(responseAdmin.data.message);
-      if (responseAdmin) {
-        set({
-          isAdmin: true,
-          isAuthenticated: true,
-          user: response.data.user,
-          token: token,
-        });
-      } else {
+      } catch (error: any) {}
+
+      if (response.data.user) {
         set({
           isAuthenticated: true,
           user: response.data.user,

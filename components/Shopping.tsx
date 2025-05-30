@@ -16,7 +16,8 @@ export default function Shopping({ title }: { title: string }) {
   const { user } = useAuthStore();
   const handlePress = (url: string) => {
     if (url) {
-      Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
+      const separator = url.includes("?") ? "&" : "?";
+      Linking.openURL(`${url}${separator}subid=${user?.mobile || ""}`);
     }
   };
 

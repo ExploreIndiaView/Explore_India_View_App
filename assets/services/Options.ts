@@ -1303,32 +1303,26 @@ export const OTHERSERVICES = [
     image: "@/assets/images/hotel1.jpg",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels",
     PoweredBy: "Make My Trip",
-  },
-  {
-    name: "Cabs",
-    image: "@/assets/images/cab.jpg",
-    path: "https://m.uber.com/ul/", // Direct Uber booking link
-    PoweredBy: "Uber",
-  },
+  }
 ];
 
 export const SHOPPING = [
   {
     name: "Amazon",
     image: "@/assets/images/amazon.png",
-    path: "https://www.amazon.in",
+    path: "https://www.amazon.in/?&language=en_IN&ref_=as_li_ss_tl",
     PoweredBy: "Amazon",
   },
   {
     name: "Flipkart",
     image: "@/assets/images/flipkart.png",
-    path: "https://www.flipkart.com",
+    path: "https://www.flipkart.com/?affid=rohanpouri&affExtParam1=ENKR20250530A1464669521&affExtParam2=4364924",
     PoweredBy: "Flipkart",
   },
   {
     name: "Myntra",
     image: "@/assets/images/myntra.png",
-    path: "https://www.myntra.com",
+    path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.myntra.com%2F",
     PoweredBy: "Myntra",
   },
   {

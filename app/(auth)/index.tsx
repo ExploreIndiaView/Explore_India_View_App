@@ -65,7 +65,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <KeyboardAvoidingView 
+    <KeyboardAvoidingView
       style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
@@ -135,9 +135,14 @@ export default function LoginScreen() {
             )}
           </TouchableOpacity>
           {/* Signup Link */}
+            <TouchableOpacity onPress={() => router.push("/(auth)/resetPassword")}>
+            <Text style={[styles.signupLink, { textAlign: "right", marginTop: 10 }]}>
+              Forgot Password
+            </Text>
+          </TouchableOpacity>
           <View style={styles.signupContainer}>
             <Text style={styles.signupText}>Don't have an account? </Text>
-            <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
+          <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
               <Text style={styles.signupLink}>Sign Up</Text>
             </TouchableOpacity>
           </View>
@@ -209,7 +214,7 @@ const styles = StyleSheet.create({
     paddingVertical: Platform.OS === "ios" ? 12 : 8,
     fontSize: 16,
     backgroundColor: "#f9fafb",
-    color:"#000",
+    color: "#000",
   },
   showPassword: {
     position: "absolute",

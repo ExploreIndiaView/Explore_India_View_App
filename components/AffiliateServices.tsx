@@ -14,11 +14,12 @@ import { useAuthStore } from "@/assets/store/auth.store";
 
 export default function AffiliateServices({ title }: { title: string }) {
   const { user } = useAuthStore();
-  const handlePress = (url: string) => {
-    if (url) {
-      Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
-    }
-  };
+const handlePress = (url: string) => {
+  if (url) {
+    const separator = url.includes("?") ? "&" : "?";
+    Linking.openURL(`${url}${separator}subid=${user?.mobile || ""}`);
+  }
+};
 
   return (
     <View style={styles.container}>
