@@ -47,7 +47,7 @@ export default function TabHeader({
     // Handle navigation or actions here
     if (option === "profile") router.push("/profile");
     if (option === "logout") handleLogout();
-    if (option === "T&C") router.push("/disclaimer")
+    if (option === "T&C") router.push("/disclaimer");
   };
   return (
     <View style={styles.header}>
@@ -71,9 +71,16 @@ export default function TabHeader({
         </Pressable>
       </View>
 
-      {/* User Profile Icon */}
       {/* Right Side: Language + Profile */}
       <View style={{ flexDirection: "row", alignItems: "center" }}>
+        {/* Notification Icon */}
+        <TouchableOpacity
+          onPress={() => router.push("/cashbacks")}
+          style={[styles.iconButton, { marginRight: 10 }]}
+        >
+          <Ionicons name="notifications-outline" size={25} color="#22223b" />
+        </TouchableOpacity>
+
         {/* Language Dropdown */}
         <View style={{ marginRight: 10 }}>
           <TouchableOpacity

@@ -9,6 +9,7 @@ const PARTNERS = [
   { name: "MakeMyTrip", image: require("@/assets/images/makemytrip.png") },
   { name: "HappyEasyGo", image: require("@/assets/images/happyeasygo.png") },
   { name: "RailYatri", image: require("@/assets/images/railyatri.png") },
+  { name: "Book My Show", image: require("@/assets/images/bookMyShow.png") },
 ];
 
 export default function Partners() {

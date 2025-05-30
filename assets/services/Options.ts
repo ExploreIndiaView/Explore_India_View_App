@@ -1303,6 +1303,12 @@ export const OTHERSERVICES = [
     image: "@/assets/images/hotel1.jpg",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels",
     PoweredBy: "Make My Trip",
+  },
+  {
+    name: "Movie Tickets",
+    image: "@/assets/images/bookMyShow.png",
+    path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fin.bookmyshow.com%2F",
+    PoweredBy: "Book My Show",
   }
 ];
 
@@ -1363,27 +1369,40 @@ export const RECHARGESERVICES = [
   {
     name: "Mobile Recharge",
     icon: "mobile",
-    path: "https://amzn.to/4kzSLLV", // Amazon Pay Mobile Recharge
+    path: "https://www.amazon.in/hfc/mobileRecharge?&linkCode=ll2&tag=exploreindiav-21&linkId=ad589160f1d9be0c0d61c509137b2e98&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay Mobile Recharge
     PoweredBy: "Amazon Pay",
   },
   {
     name: "Electricity",
     icon: "electricity",
-    path: "https://amzn.to/3Hdu8Gy", // Amazon Pay Electricity
+    path: "https://www.amazon.in/apay/landing/electricity?&linkCode=ll2&tag=exploreindiav-21&linkId=ee9d8f3810058cd5f9fc6fd57b849ece&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay Electricity
     PoweredBy: "Amazon Pay",
   },
   {
     name: "Mobile Postpaid",
     icon: "postpaid",
-    path: "https://www.amazon.in/hfc/bill/postpaid", // Amazon Pay Postpaid
+    path: "https://www.amazon.in/hfc/mobileRecharge?&linkCode=ll2&tag=exploreindiav-21&linkId=ad589160f1d9be0c0d61c509137b2e98&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay Postpaid
     PoweredBy: "Amazon Pay",
   },
   {
     name: "DTH",
     icon: "dth",
-    path: "https://www.amazon.in/hfc/bill/dth", // Amazon Pay DTH
+    path: "https://www.amazon.in/apay/landing/dth?&linkCode=ll2&tag=exploreindiav-21&linkId=47c3e75decc15a4648deedbcffa78ed3&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay DTH
     PoweredBy: "Amazon Pay",
   },
+  {
+    name: "Water Bill",
+    icon: "water",
+    path: "https://www.amazon.in/apay/landing/water?&linkCode=ll2&tag=exploreindiav-21&linkId=d556ee8368ff859b1cc1524ed6784aeb&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay DTH
+    PoweredBy: "Amazon Pay",
+  },
+  {
+    name: "Gas Cylinder",
+    icon: "gas",
+    path: "https://www.amazon.in/apay/landing/gas?&linkCode=ll2&tag=exploreindiav-21&linkId=1af8f4eac1f3a8fa3c77b62283a25cd8&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay DTH
+    PoweredBy: "Amazon Pay",
+  },
+
   // Add more as needed
 ];
 

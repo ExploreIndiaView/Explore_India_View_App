@@ -77,6 +77,7 @@ export const imageMap: Record<string, any> = {
   "@/assets/images/zepto.png": require("@/assets/images/zepto.png"),
   "@/assets/images/uber.png": require("@/assets/images/uber.png"),
   "@/assets/images/ola.png": require("@/assets/images/ola.png"),
+  "@/assets/images/bookMyShow.png": require("@/assets/images/bookMyShow.png"),
 
   "@/assets/images/offer1.png": require("@/assets/images/offer1.png"),
   "@/assets/images/gift.jpg": require("@/assets/images/gift.jpg"),

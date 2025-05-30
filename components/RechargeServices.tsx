@@ -14,11 +14,11 @@ import {
 
 export default function RechargeServices({ title }: { title: string }) {
   const { user } = useAuthStore();
-    const handlePress = (url: string) => {
-      if (url) {
-        Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
-      }
-    };
+  const handlePress = (url: string) => {
+    if (url) {
+      Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -26,6 +26,10 @@ export default function RechargeServices({ title }: { title: string }) {
       <FlatList
         data={RECHARGESERVICES}
         numColumns={4}
+        contentContainerStyle={{
+          paddingBottom: 10,
+        }}
+        showsVerticalScrollIndicator={false}
         keyExtractor={(item, idx) => item.name?.toString() || idx.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity
@@ -44,6 +48,10 @@ export default function RechargeServices({ title }: { title: string }) {
                     ? "phone-portrait-sharp"
                     : item.icon === "dth"
                     ? "tv-outline"
+                    : item.icon === "water"
+                    ? "water"
+                    : item.icon === "gas"
+                    ? "flame"
                     : "cash"
                 }
                 size={35}
@@ -59,8 +67,6 @@ export default function RechargeServices({ title }: { title: string }) {
             </Text>
           </TouchableOpacity>
         )}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 12 }}
       />
     </View>
   );
@@ -81,8 +87,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   gridItem: {
-    flex: 1,
     alignItems: "center",
+    width: "25%",
     marginBottom: 18,
     paddingHorizontal: 6,
   },

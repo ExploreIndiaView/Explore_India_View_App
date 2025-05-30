@@ -11,7 +11,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import RazorpayCheckout from "react-native-razorpay";
 import InquirySection from "./InquirySection";
@@ -294,9 +294,13 @@ export default function BookingCard({ props }: { props: Props }) {
                   styles.radioBtn,
                   input.hotel === "3 Star" && styles.radioBtnActive,
                 ]}
-                onPress={() =>
-                  setInput((prev) => ({ ...prev, hotel: "3 Star" }))
-                }
+                onPress={() => {
+                  if (input.hotel === "3 Star") {
+                    setInput((prev) => ({ ...prev, hotel: "" }));
+                  } else {
+                    setInput((prev) => ({ ...prev, hotel: "3 Star" }));
+                  }
+                }}
               >
                 <Text
                   style={[
@@ -312,9 +316,13 @@ export default function BookingCard({ props }: { props: Props }) {
                   styles.radioBtn,
                   input.hotel === "5 Star" && styles.radioBtnActive,
                 ]}
-                onPress={() =>
-                  setInput((prev) => ({ ...prev, hotel: "5 Star" }))
-                }
+                onPress={() => {
+                  if (input.hotel === "5 Star") {
+                    setInput((prev) => ({ ...prev, hotel: "" }));
+                  } else {
+                    setInput((prev) => ({ ...prev, hotel: "5 Star" }));
+                  }
+                }}
               >
                 <Text
                   style={[
