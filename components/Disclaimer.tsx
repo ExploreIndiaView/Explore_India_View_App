@@ -19,7 +19,7 @@ export default function Disclaimer() {
           shopping offers via affiliate links. We do not own or operate these
           services and are not responsible for service delivery, delays,
           cancellations, or payments processed by third-party platforms such as
-          Amazon, Flipkart, IRCTC, Meesho, Ola, Uber, etc
+          Amazon, Flipkart, IRCTC, etc
           {"\n\n"}
           All content, offers, prices, and availability are subject to change
           and may vary on the respective partner websites. Cashback and rewards

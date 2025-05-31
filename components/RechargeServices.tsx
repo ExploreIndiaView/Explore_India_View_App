@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
   FlatList,
+  Image,
   Linking,
   StyleSheet,
   Text,
@@ -25,7 +26,7 @@ export default function RechargeServices({ title }: { title: string }) {
       <Text style={styles.heading}>{title}</Text>
       <FlatList
         data={RECHARGESERVICES}
-        numColumns={4}
+        numColumns={3}
         contentContainerStyle={{
           paddingBottom: 10,
         }}
@@ -48,22 +49,40 @@ export default function RechargeServices({ title }: { title: string }) {
                     ? "phone-portrait-sharp"
                     : item.icon === "dth"
                     ? "tv-outline"
-                    : item.icon === "water"
-                    ? "water"
-                    : item.icon === "gas"
-                    ? "flame"
-                    : "cash"
+                    : undefined
                 }
                 size={35}
-                color={Colors.PRIMARY}
+                color={item.icon === "water" ? "#48cdff" : Colors.PRIMARY}
               />
+              {item.icon === "water" && (
+                <Image
+                  source={require("@/assets/images/water.jpg")}
+                  style={{
+                    width: 50,
+                    height: 50,
+                    borderRadius: 50,
+                    marginTop: -35,
+                  }}
+                />
+              )}
+              {item.icon === "gas" && (
+                <Image
+                  source={require("@/assets/images/lpg.jpg")}
+                  style={{
+                    width: 50,
+                    height: 50,
+                    borderRadius: 50,
+                    marginTop: -35,
+                  }}
+                />
+              )}
             </View>
             <Text style={styles.name} numberOfLines={1} ellipsizeMode="tail">
               {item.name}
             </Text>
             <Text style={styles.poweredBy}>Powered by</Text>
             <Text style={{ fontWeight: "900", color: "#000", fontSize: 12 }}>
-              {item.PoweredBy || "Partner"}
+              {"Amazon"}
             </Text>
           </TouchableOpacity>
         )}
@@ -87,8 +106,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   gridItem: {
+    width: "33%",
     alignItems: "center",
-    width: "25%",
     marginBottom: 18,
     paddingHorizontal: 6,
   },

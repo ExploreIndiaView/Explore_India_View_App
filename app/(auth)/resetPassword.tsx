@@ -1,4 +1,4 @@
-import { ResetInput, UserInput } from "@/assets/services/types";
+import { ResetInput } from "@/assets/services/types";
 import { useAuthStore } from "@/assets/store/auth.store";
 import { Ionicons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
@@ -52,7 +52,7 @@ export default function ResetPasswordScreen() {
     setLoading(true);
     try {
       const res = await resetPassword(input);
-      if(res) {
+      if (res) {
         router.replace("/(auth)");
       }
     } catch (e) {
@@ -84,6 +84,7 @@ export default function ResetPasswordScreen() {
             containerButtonStyle={styles.countryPicker}
           />
           <TextInput
+            placeholderTextColor={"#000"}
             style={[styles.input, { flex: 1, marginLeft: 8 }]}
             placeholder="Enter Mobile Number"
             keyboardType="number-pad"
@@ -114,6 +115,7 @@ export default function ResetPasswordScreen() {
         {/* Answer */}
         <Text style={styles.label}>Answer</Text>
         <TextInput
+          placeholderTextColor={"#000"}
           style={styles.input}
           placeholder="Enter Answer"
           value={input.answer}
@@ -123,6 +125,7 @@ export default function ResetPasswordScreen() {
         <Text style={styles.label}>New Password</Text>
         <View>
           <TextInput
+            placeholderTextColor={"#000"}
             style={styles.input}
             placeholder="Enter new Password"
             secureTextEntry={!showPassowrd}
@@ -156,7 +159,7 @@ export default function ResetPasswordScreen() {
           )}
         </TouchableOpacity>
         <Text style={styles.footerText}>
-          Already have an account?{" "}
+          Go to{" "}
           <Text
             style={styles.link}
             onPress={() => {
@@ -226,6 +229,7 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     backgroundColor: "#f9fafb",
+    color: "#000",
   },
   countryPicker: {
     borderWidth: 1,

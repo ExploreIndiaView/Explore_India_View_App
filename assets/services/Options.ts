@@ -1309,7 +1309,7 @@ export const OTHERSERVICES = [
     image: "@/assets/images/bookMyShow.png",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fin.bookmyshow.com%2F",
     PoweredBy: "Book My Show",
-  }
+  },
 ];
 
 export const SHOPPING = [
@@ -1360,7 +1360,7 @@ export const CABSERVICES = [
   {
     name: "Zepto",
     image: "@/assets/images/zepto.png",
-    path: "", 
+    path: "",
     PoweredBy: "Zepto",
   },
 ];
@@ -1397,7 +1397,7 @@ export const RECHARGESERVICES = [
     PoweredBy: "Amazon Pay",
   },
   {
-    name: "Gas Cylinder",
+    name: "LPG Gas Cylinder",
     icon: "gas",
     path: "https://www.amazon.in/apay/landing/gas?&linkCode=ll2&tag=exploreindiav-21&linkId=1af8f4eac1f3a8fa3c77b62283a25cd8&language=en_IN&ref_=as_li_ss_tl", // Amazon Pay DTH
     PoweredBy: "Amazon Pay",
@@ -1960,7 +1960,7 @@ export const RAJASTHANDISTRICTS = [
   "Udaipur",
 ];
 
-export const BLOGS = [
+export const BLOGS1 = [
   {
     BlogTitle: "10 Must-Visit Places in India for First-Time Travelers",
     MetaTitle: "Top 10 Must-Visit Destinations in India",
@@ -2080,5 +2080,133 @@ export const BLOGS = [
       "Stay informed and safe with these must-know tips for solo and group travelers in India.",
     ContentSummary:
       "Builds trust with your audience and encourages bookings from first-time travelers.",
+  },
+];
+
+export const BLOGS = [
+  {
+    BlogTitle:
+      "Top 10 Reasons to Use the Explore India View App for Your Daily Needs",
+    MetaDescription:
+      "Discover why Explore India View is the ultimate app for travel, shopping, cashback, and more! Save money & time with one smart solution.",
+    Content:
+      "Are you tired of switching between multiple apps for travel, shopping, and bill payments? Explore India View simplifies your life by combining everything in one place! Here’s why you should download it today: \n\n1. All-in-One Convenience – Book flights, trains, hotels, and cabs in a single app.\n2. Exclusive Cashback – Earn rewards on every transaction.\n3. Best Travel Deals – Compare prices & grab the cheapest fares.\n4. Smart Shopping – Access Amazon, Flipkart, and Meesho offers in one place.\n5. Affiliate Earnings – Get paid for sharing deals with friends.\n6. Bill Payments & Recharges – Save money on mobile, DTH, and electricity bills.\n7. Ride Comparison – Check Ola, Uber & Rapido fares before booking.\n8. Student-Friendly Discounts – Special offers for college-goers.\n9. Trusted Hotel Bookings – Best prices with instant cashback.\n10. Seamless User Experience – Easy navigation & quick bookings.\n\nDownload Explore India View now and make every transaction rewarding!",
+  },
+  {
+    BlogTitle:
+      "How to Book Flights, Trains & Hotels in One App – Explore India View",
+    MetaDescription:
+      "Learn how to book flights, trains, and hotels effortlessly with Explore India View. Save time & money with India's best travel app!",
+    Content:
+      "Gone are the days of juggling multiple apps for travel bookings! Explore India View lets you reserve flights, trains, and hotels in just a few clicks. Here's how:\n\n1. Flight Bookings Made Easy\n- Enter your departure & destination.\n- Compare prices across airlines.\n- Apply promo codes for extra discounts.\n- Earn cashback on every booking!\n\n2. Train Ticketing in Minutes\n- Check IRCTC availability & alternative routes.\n- Secure your Tatkal tickets faster.\n- Get real-time PNR updates.",
+  },
+  {
+    BlogTitle:
+      "How to Book Flights, Trains & Hotels in One App – Explore India View",
+    MetaDescription:
+      "Learn how to book flights, trains, and hotels effortlessly with Explore India View. Save time & money with India's best travel app!",
+    Content:
+      "Gone are the days of juggling multiple apps for travel bookings! Explore India View lets you reserve flights, trains, and hotels in just a few clicks. Here's how:\n\n1. Flight Bookings Made Easy\n- Enter your departure & destination\n- Compare prices across airlines\n- Apply promo codes for extra discounts\n- Earn cashback on every booking!\n\n2. Train Ticketing in Minutes\n- Check IRCTC availability & alternative routes\n- Secure your Tatkal tickets faster\n- Get real-time PNR updates\n\n3. Hotel Bookings with Best Prices\n- Filter by budget, ratings & location\n- Use affiliate deals for extra savings\n- Earn rewards on every stay\n\nWhy Choose Explore India View?\n- No switching between apps\n- Best price comparison\n- Instant cashback on bookings\n\nTry it now and travel smarter!",
+  },
+  {
+    BlogTitle:
+      "Earn Cashback While You Shop – Explore India View Affiliate Deals Explained",
+    MetaDescription:
+      "Want extra cashback on shopping? Learn how Explore India View's affiliate deals help you save on Amazon, Flipkart & more!",
+    Content:
+      "Who doesn't love earning money while shopping? With Explore India View, you get cashback on every purchase through affiliate deals. Here's how it works:\n\nHow Affiliate Cashback Works\n- Browse Partner Offers – Amazon, Flipkart, Meesho, and more.\n- Shop via the App – Click on deals before purchasing.\n- Get Instant Cashback – A percentage of your spending returns as rewards.\n\nBest Ways to Maximize Earnings\n✔ Use the app for daily shopping (electronics, fashion, groceries).\n✔ Share referral links with friends for extra commissions.\n✔ Check limited-time festive sale offers.\n\nPro Tip: Stack cashback with existing discounts for maximum savings!\n\nStart shopping smarter today with Explore India View.",
+  },
+  {
+    BlogTitle:
+      "Amazon, Flipkart, Meesho Offers in One App – Shop Smart with Explore India View",
+    MetaDescription:
+      "Get all Amazon, Flipkart & Meesho discounts in one place! Explore India View helps you shop smarter & save more.",
+    Content:
+      "Online shopping just got easier! Instead of hunting for deals across multiple apps, Explore India View brings you the best offers from Amazon, Flipkart, and Meesho in one place.\n\nWhy Use Explore India View for Shopping?\n- No More Missed Discounts – All promo codes in one app.\n- Extra Cashback – Earn rewards on every order.\n- Price Comparison – Find the cheapest seller instantly.\n\nHow to Grab the Best Deals?\n1. Open the app & select your favorite store.\n2. Apply available coupons at checkout.\n3. Complete the purchase & get cashback credited.\n\nBonus: Students get exclusive discounts on gadgets & fashion!\n\nDownload now and never overpay again!",
+  },
+  {
+    BlogTitle:
+      "How Explore India View Helps You Compare Ride Fares – Ola, Uber & Rapido",
+    MetaDescription:
+      "Save money on rides! Learn how Explore India View compares Ola, Uber & Rapido fares to help you choose the cheapest option.",
+    Content:
+      "Ever wondered if you're paying too much for your cab rides? Explore India View lets you compare fares across Ola, Uber, and Rapido in real-time, ensuring you always get the best deal.\n\nHow Ride Comparison Works\n1. Enter Your Route – Pickup & drop locations.\n2. See All Options – View prices for Uber, Ola, Rapido & more.\n3. Book the Cheapest Ride – Save money instantly!\n\nWhy Compare Before Booking?\n✔ Dynamic Pricing – Avoid surge charges.\n✔ Multiple Options – Choose bikes, autos, or cabs.\n✔ Cashback Offers – Earn rewards on every ride.\n\nPro Tip: Check fares at different times to get the lowest rates!\n\nDownload Explore India View now and ride smarter.",
+  },
+  {
+    BlogTitle: "Your Complete Travel Companion – Explore India View App Review",
+    MetaDescription:
+      "Is Explore India View worth it? Read our honest review covering flights, hotels, cashback & more!",
+    Content:
+      "Looking for an all-in-one travel app? Explore India View combines flight bookings, hotel stays, cab rides, and shopping deals in a single platform. Here's our detailed review:\n\nKey Features\n- Flights & Trains – Best prices with instant cashback.\n- Hotel Bookings – 10% cheaper than competitors.\n- Ride Comparison – Ola, Uber, Rapido fare checks.\n- Shopping Cashback – Amazon, Flipkart, Meesho offers.\n- Bill Payments – Discounts on recharges & utilities.\n\nUser Experience\n- Smooth Navigation – Easy booking process.\n- Fast Customer Support – Quick query resolution.\n- Rewards System – Earn points redeemable for discounts.\n\nVerdict: A must-have for travelers & shoppers!\n\nTry it today and simplify your online transactions.",
+  },
+  {
+    BlogTitle:
+      "How to Save Money on Recharges and Bill Payments with Explore India View",
+    MetaDescription:
+      "Stop overpaying on bills! Learn how Explore India View offers discounts on recharges, electricity, DTH & more.",
+    Content:
+      "Paying bills shouldn't burn a hole in your pocket. With Explore India View, you get exclusive discounts on:\n\n- Mobile Recharges (Jio, Airtel, Vi)\n- DTH Bill Payments (Tata Sky, Airtel TV)\n- Electricity & Gas Bills\n- Fastag & Loan Repayments\n\nHow to Save?\n1. Open the app & go to 'Recharge & Bills'.\n2. Select your provider & enter details.\n3. Apply promo codes for extra discounts.\n4. Earn cashback on every payment!\n\nBonus: First-time users get 5% extra cashback!\n\nStart saving now—download the app!",
+  },
+  {
+    BlogTitle:
+      "Best Travel Packages in India You Can Book from Explore India View",
+    MetaDescription:
+      "Discover budget-friendly travel packages! Book flights + hotels together on Explore India View & save big.",
+    Content:
+      "Planning a trip? Explore India View offers curated travel packages across India at unbeatable prices.\n\nPopular Packages Include:\n✈️ Goa Getaway – Flights + 3-star hotel @ ₹8,999\n⛰️ Manali Adventure – Volvo + stay @ ₹6,500\n🏰 Golden Triangle Tour – Delhi, Jaipur, Agra @ ₹12,000\n\nWhy Book Here?\n✔ All-in-One Deals – No extra booking hassles.\n✔ Group Discounts – Special rates for families.\n✔ Instant Cashback – Extra savings on every package.\n\nLimited-time offer: Use code TRAVEL100 for ₹100 off!\n\nBook now & explore India for less!",
+  },
+  {
+    BlogTitle:
+      "Affiliate Marketing Inside an App? How Explore India View Makes It Work",
+    MetaDescription:
+      "Earn money with affiliate marketing! Learn how Explore India View helps users & promoters make extra income.",
+    Content:
+      "Did you know you can earn passive income just by sharing deals? Explore India View's affiliate program rewards you for every purchase made through your referral.\n\nHow It Works\n1. Sign Up as an Affiliate – Free & easy.\n2. Share Deals – Send links via WhatsApp, Instagram, etc.\n3. Earn Commissions – Get paid when someone shops using your link.\n\nWhat Can You Promote?\n- Travel Bookings (Flights, hotels)\n- Shopping Deals (Amazon, Flipkart)\n- Recharge Offers (Mobile, DTH)\n\nEarning Potential: Up to ₹5,000/month for active promoters!\n\nStart today & turn your network into income!",
+  },
+  {
+    BlogTitle: "Why Explore India View is the Only Travel App You'll Ever Need",
+    MetaDescription:
+      "One app for all travel needs? Yes! Explore India View combines bookings, cashback & more—see why it's a game-changer.",
+    Content:
+      "Tired of switching between MakeMyTrip, IRCTC, Uber, and Amazon? Explore India View replaces them all with:\n\n- Flights, Trains & Buses – Lowest price guarantee\n- Hotels & Homestays – 20% cheaper than competitors\n- Ride Comparisons – Ola vs Uber vs Rapido\n- Shopping Cashback – Amazon, Flipkart, Meesho\n- Bill Payments – Discounts on recharges\n\nPlus:\n✓ Cashback on every transaction\n✓ User-friendly interface\n✓ Secure payments\n\nSwitch today & simplify your life!",
+  },
+  {
+    BlogTitle:
+      "How to Earn Rewards and Cashback with Every Transaction on Explore India View",
+    MetaDescription:
+      "Want rewards on every purchase? Learn how Explore India View gives cashback on travel, shopping & bills.",
+    Content:
+      "Who doesn't love free money? With Explore India View, you earn cashback on:\n\n✔ Flight & Train Bookings\n✔ Hotel Reservations\n✔ Online Shopping (Amazon, Flipkart)\n✔ Bill Payments & Recharges\n\nHow to Maximize Earnings?\n1. Use the app for all transactions – More spending = more rewards.\n2. Check 'Offers' section – Limited-time cashback boosts.\n3. Refer friends – Get ₹100 per successful sign-up.\n\nPro Tip: Withdraw earnings via UPI or bank transfer!\n\nStart earning today—download now!",
+  },
+  {
+    BlogTitle: "Explore India View App – One App for Everything You Do Online",
+    MetaDescription:
+      "Replace 10+ apps with one! Explore India View handles travel, shopping, bills & more—download now!",
+    Content:
+      "Imagine an app that does everything—travel, shopping, bills, and cashback. That's Explore India View!\n\nWhat Can You Do?\n✈️ Book flights & trains\n🏨 Reserve hotels & homestays\n🛍️ Shop on Amazon, Flipkart, Meesho\n📱 Recharge phones & pay bills\n🚗 Compare Ola, Uber, Rapido fares\n\nWhy It's Better?\n✔ No more app clutter – One solution for all needs.\n✔ Save money – Best prices + cashback.\n✔ Earn rewards – Affiliate income opportunities.\n\nGet it now & declutter your phone!",
+  },
+  {
+    BlogTitle:
+      "How College Students Can Save More with Explore India View's Affiliate Offers",
+    MetaDescription:
+      "Student budget tight? Explore India View helps you save on travel, shopping & earn via affiliate deals!",
+    Content:
+      "Being a student is expensive—but Explore India View helps you save & earn with:\n\n🎓 Exclusive Student Benefits\n- Discounted Travel – Flights, trains & buses\n- Tech Deals – Laptops, phones at lowest prices\n- 👗 Fashion & Essentials – Myntra, Ajio cashback\n\n💰 Earn as an Affiliate\n1. Share referral links with classmates\n2. Earn ₹50-200 per successful booking\n3. Withdraw via UPI for pocket money!\n\n🎉 Bonus: Use code STUDENT100 for extra ₹100 off!\n\nDownload now & start saving!",
+  },
+  {
+    BlogTitle:
+      "Hotel Booking Made Easy with Explore India View – Offers, Cashback & More",
+    MetaDescription:
+      "Book hotels smarter! Explore India View offers discounts, cashback & price comparisons for the best stays.",
+    Content:
+      "Finding a cheap, good-quality hotel is now effortless with Explore India View!\n\n🏨 Why Book Here?\n- Lowest Price Guarantee – Cheaper than MMT & Goibibo\n- Instant Cashback – Up to 10% back on every booking\n- Verified Reviews – Real guest ratings for honest opinions\n\n📱 How to Book?\n1. Enter destination & dates\n2. Filter by budget, ratings & amenities\n3. Apply 'HOTEL200' for extra ₹200 off!\n\n💡 Pro Tip: Book early-morning check-ins for discounts!\n\nTry it now & stay for less!",
+  },
+  {
+    BlogTitle:
+      "Why Explore India View Is the Smartest App for Budget Travelers in India",
+    MetaDescription:
+      "Traveling on a budget? Explore India View helps you save on flights, hotels, rides & shopping—all in one app!",
+    Content:
+      "Smart travelers save money without compromise—and Explore India View makes it possible with:\n\n💰 Budget Travel Hacks\n✔ Flight Price Alerts – Book when fares drop\n✔ Last-Minute Hotel Deals – 30% off unsold rooms\n✔ Ride Fare Comparisons – Always pick the cheapest\n✔ Cashback on Every Booking – Extra savings\n\n🏆 Real User Savings\n- Rahul, Mumbai saved ₹2,500 on a Goa trip\n- Priya, Delhi got 15% cashback on Amazon shopping\n\nJoin thousands of smart travelers—download now!",
   },
 ];

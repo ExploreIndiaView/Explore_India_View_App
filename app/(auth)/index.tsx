@@ -93,6 +93,7 @@ export default function LoginScreen() {
               onClose={() => setShowCountryPicker(false)}
             />
             <TextInput
+              placeholderTextColor={"#000"}
               style={[styles.input, { flex: 1 }]}
               keyboardType="number-pad"
               maxLength={10}
@@ -105,6 +106,7 @@ export default function LoginScreen() {
           <Text style={styles.label}>Password</Text>
           <View>
             <TextInput
+              placeholderTextColor={"#000"}
               style={styles.input}
               placeholder="Enter Password"
               secureTextEntry={!showPassowrd}
@@ -135,14 +137,18 @@ export default function LoginScreen() {
             )}
           </TouchableOpacity>
           {/* Signup Link */}
-            <TouchableOpacity onPress={() => router.push("/(auth)/resetPassword")}>
-            <Text style={[styles.signupLink, { textAlign: "right", marginTop: 10 }]}>
+          <TouchableOpacity
+            onPress={() => router.push("/(auth)/resetPassword")}
+          >
+            <Text
+              style={[styles.signupLink, { textAlign: "right", marginTop: 10 }]}
+            >
               Forgot Password
             </Text>
           </TouchableOpacity>
           <View style={styles.signupContainer}>
             <Text style={styles.signupText}>Don't have an account? </Text>
-          <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
+            <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
               <Text style={styles.signupLink}>Sign Up</Text>
             </TouchableOpacity>
           </View>

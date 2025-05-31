@@ -71,6 +71,7 @@ export default function SignupScreen() {
         {/* Name */}
         <Text style={styles.label}>Name</Text>
         <TextInput
+          placeholderTextColor={"#000"}
           style={styles.input}
           placeholder="Enter Name"
           value={input.fullname}
@@ -90,6 +91,7 @@ export default function SignupScreen() {
             containerButtonStyle={styles.countryPicker}
           />
           <TextInput
+            placeholderTextColor={"#000"}
             style={[styles.input, { flex: 1, marginLeft: 8 }]}
             placeholder="Enter Mobile Number"
             keyboardType="number-pad"
@@ -102,6 +104,7 @@ export default function SignupScreen() {
         <Text style={styles.label}>Password</Text>
         <View>
           <TextInput
+            placeholderTextColor={"#000"}
             style={styles.input}
             placeholder="Enter Password"
             secureTextEntry={!showPassowrd}
@@ -133,6 +136,7 @@ export default function SignupScreen() {
           {/* Answer */}
           <Text style={styles.label}>Answer</Text>
           <TextInput
+            placeholderTextColor={"#000"}
             style={styles.input}
             placeholder="Enter Answer"
             value={input.answer}
@@ -232,9 +236,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#d1d5db",
     borderRadius: 8,
-    padding: 10,
+    paddingHorizontal: 12,
+    paddingVertical: Platform.OS === "ios" ? 12 : 8,
     fontSize: 16,
     backgroundColor: "#f9fafb",
+    color: "#000",
   },
   countryPicker: {
     borderWidth: 1,

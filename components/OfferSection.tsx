@@ -30,8 +30,8 @@ const OffersCarousel = () => {
   const offers = [
     {
       id: 1,
-      title: "10% Discount",
-      description: "Get 10% discount on all bookings",
+      title: "Upto 10% Discount",
+      description: "Get upto 10% discount on all bookings",
       image: "@/assets/images/gift1.jpg", // Replace with actual image URL
     },
     {

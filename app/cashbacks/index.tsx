@@ -1,4 +1,5 @@
 import { useAuthStore } from "@/assets/store/auth.store";
+import BackHeader from "@/components/BackHeader";
 import React from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
@@ -13,45 +14,48 @@ export default function Cashback() {
     : [];
 
   return (
-    <FlatList
-      data={[]}
-      renderItem={undefined}
-      contentContainerStyle={{ flexGrow: 1 }}
-      ListHeaderComponent={() => (
-        <View style={styles.container}>
-          <Text style={styles.title}>Cashbacks</Text>
-          <FlatList
-            data={cashbackData}
-            renderItem={({ item, index }) => (
-              <View key={index} style={styles.cashbackItem}>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    marginBottom: 5,
-                  }}
-                >
-                  <Text style={styles.cashbackUser}>
-                    You have won the cashback of
+    <>
+      <BackHeader />
+      <FlatList
+        data={[]}
+        renderItem={undefined}
+        contentContainerStyle={{ flexGrow: 1 }}
+        ListHeaderComponent={() => (
+          <View style={styles.container}>
+            <Text style={styles.title}>Cashbacks</Text>
+            <FlatList
+              data={cashbackData}
+              renderItem={({ item, index }) => (
+                <View key={index} style={styles.cashbackItem}>
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      marginBottom: 5,
+                    }}
+                  >
+                    <Text style={styles.cashbackUser}>
+                      You have won the cashback of
+                    </Text>
+                    <Text style={styles.cashbackAmount}>₹ {item.amount}</Text>
+                  </View>
+                  <Text
+                    style={{ textAlign: "right", color: "#888", fontSize: 10 }}
+                  >
+                    {item.date?.toLocaleDateString?.().split("T")[0] ??
+                      (item.date as unknown as string).split("T")[0]}
                   </Text>
-                  <Text style={styles.cashbackAmount}>₹ {item.amount}</Text>
                 </View>
-                <Text
-                  style={{ textAlign: "right", color: "#888", fontSize: 10 }}
-                >
-                  {item.date?.toLocaleDateString?.().split("T")[0] ??
-                    (item.date as unknown as string).split("T")[0]}
-                </Text>
-              </View>
-            )}
-            ListEmptyComponent={
-              <Text style={styles.emptyText}>No cashback records found.</Text>
-            }
-            style={{ marginTop: 10 }}
-          />
-        </View>
-      )}
-    />
+              )}
+              ListEmptyComponent={
+                <Text style={styles.emptyText}>No cashback records found.</Text>
+              }
+              style={{ marginTop: 10 }}
+            />
+          </View>
+        )}
+      />
+    </>
   );
 }
 
